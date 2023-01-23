@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* GENERAL */
+:root {
+  --red: #cd0000;
+  --white: #fafafa;
+  --black: #0f0f0f;
+  --gray: #ededed;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0 0.5rem;
+}
+
+h3.concert__location {
+  margin: 0;
+  font-weight: 400;
+  text-align: end;
+}
+
+a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+  display: block;
+}
+
+a:hover {
+  transform: scaleX(-1);
+}
+
+section {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGES */
+img.cover-photo {
+  height: 100vh;
+  width: 49vw;
+  object-fit: cover;
+}
+
+img.logo {
+  width: 20rem;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+section.section--article {
+  column-width: 13rem;
+  column-gap: 2rem;
+  line-height: 1.5;
+}
+
+section.section--tour {
+  width: 100%;
+}
+
+ul.concert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+li.concert {
+  border: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.concert__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.concert__date {
+  margin: 0;
+}
+
+.concert__notes {
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+@media (max-width: 50rem) {
+  html {
+    overflow: auto;
+  }
+  body {
+    flex-direction: column;
+  }
+
+  img.cover-photo {
+    width: 100vw;
+    height: auto;
+  }
+}
