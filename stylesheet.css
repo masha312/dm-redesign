@@ -160,6 +160,10 @@ nav ul {
     flex-direction: column;
   }
 
+  main {
+    overflow-y: unset;
+  }
+
   img.cover-photo {
     width: 100vw;
     height: auto;
